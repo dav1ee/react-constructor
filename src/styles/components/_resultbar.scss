@@ -1,0 +1,49 @@
+.resultbar {
+  width: 46.666666%;
+  padding: 20px;
+  overflow: auto;
+
+  &-item {
+    text-align: center;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &--headline {
+      font-size: 24px;
+    }
+
+    &--button {
+      padding: 10px 30px;
+      background-color: $sea;
+      border-radius: 4px;
+      border: 0;
+      box-shadow: $shadow;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+
+    &--image {
+      max-width: 70%;
+      object-fit: contain;
+      box-shadow: $shadow;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 50vh;
+  }
+
+  @media (max-width: 500px) {
+    height: 40vh;
+  }
+}

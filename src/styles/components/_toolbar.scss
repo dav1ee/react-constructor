@@ -1,0 +1,82 @@
+.toolbar {
+  width: 20%;
+  padding: 20px;
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: $light-sea;
+    border-radius: 4px;
+    box-shadow: $shadow;
+    user-select: none;
+    cursor: pointer;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 10px;
+    }
+
+    &__label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 16vh;
+
+    &-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &-item {
+      &:hover {
+        transform: scale(1);
+      }
+
+      &:active {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    height: 26vh;
+
+    &-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    &-item {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

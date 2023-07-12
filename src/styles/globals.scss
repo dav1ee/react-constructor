@@ -1,0 +1,16 @@
+@import './reset';
+@import './variables';
+@import './components/all';
+
+body {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.layout {
+  display: flex;
+  height: calc(100vh - 70px);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}

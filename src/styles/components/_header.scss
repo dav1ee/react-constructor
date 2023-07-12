@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 20px;
+  border-bottom: 2px solid $sea;
+
+  &-logo {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+}
